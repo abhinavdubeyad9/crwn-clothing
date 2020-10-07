@@ -1,6 +1,8 @@
 body {
+ 
   font-family: 'Open Sans Condensed';
-  padding: 20px 60px;
+  padding: 20px 40px;
+  overflow-x: hidden;
 }
 
 a {
@@ -8,6 +10,7 @@ a {
   color: black;
 }
 
-*{
+* {
+  
   box-sizing: border-box;
 }
