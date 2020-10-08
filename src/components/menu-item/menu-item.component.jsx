@@ -22,3 +22,4 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
 );
 
 export default withRouter(MenuItem);
+//we are usign withRoute which is hoc , to get props (histroy,match) from hompeage, 

@@ -17,7 +17,7 @@ class App extends React.Component {
       currentUser: null
     };
   }
-
+//in order to close user
   unsubscribeFromAuth = null;
 
   componentDidMount() {
@@ -41,14 +41,14 @@ class App extends React.Component {
     });
   }
 
-  componentWillUnmount() {
+  componentWillUnmount() {      //this will close subcription
     this.unsubscribeFromAuth();
   }
 
   render() {
     return (
       <div>
-        <Header currentUser={this.state.currentUser} />
+        <Header/>
         <Switch>
           <Route exact path='/' component={HomePage} />
           <Route path='/shop' component={ShopPage} />
@@ -58,5 +58,8 @@ class App extends React.Component {
     );
   }
 }
-
+//a route has 3 props history, location and match , and they are very usefull
 export default App;
+
+// exact keyword specifies that ..exactly / is used for this path
+//Using switch will only render the route with given path and other parts will not render
