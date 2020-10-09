@@ -1,7 +1,9 @@
+import { addItem } from './cart.actions';
 import CartActionTypes from './cart.types';
-
+import {addItemToCart} from './cart.utils'
 const INITIAL_STATE = {
-  hidden: true
+  hidden: true,
+  cartItems: []
 };
 
 const cartReducer = (state = INITIAL_STATE, action) => {
@@ -11,6 +13,12 @@ const cartReducer = (state = INITIAL_STATE, action) => {
         ...state,
         hidden: !state.hidden    //oposite of whats in the state ie false
       };
+    case CartActionTypes.ADD_ITEM:
+      return{
+        ...state,
+        cartItems: addItemToCart(state.cartItems, action.payload)          //we are ending old values with new values
+
+      }
     default:
       return state;
   }
