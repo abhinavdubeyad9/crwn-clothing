@@ -58,4 +58,3 @@ class Directory extends React.Component {
 }
 
 export default Directory;
-//...otherSectionProps is eqvivalent to  title={title} imageUrl={imageUrl} size={size} linkUrl={linkUrl}
