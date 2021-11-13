@@ -1,2 +1,2 @@
-# Crown Clothing
+# Crwn Clothing
 A platform for shopaholics
